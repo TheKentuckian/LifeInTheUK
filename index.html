@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practice for the Life in the UK Test with realistic mock exams">
+    <title>Life in the UK Test Practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen active">
+            <h1>Life in the UK Test</h1>
+            <div class="info-card">
+                <h2>Test Format</h2>
+                <ul>
+                    <li>24 multiple-choice questions</li>
+                    <li>45 minutes time limit</li>
+                    <li>Pass mark: 75% (18/24 correct)</li>
+                </ul>
+            </div>
+            <button id="startBtn" class="btn btn-primary">Start Practice Test</button>
+            <div class="info-text">
+                <p>This practice test simulates the actual Life in the UK test format.</p>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizScreen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+                <div class="quiz-info">
+                    <span id="questionCounter">Question 1 of 24</span>
+                    <span id="timer">45:00</span>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2 id="questionText" class="question-text"></h2>
+                <div id="answersContainer" class="answers-container"></div>
+            </div>
+
+            <div class="quiz-controls">
+                <button id="prevBtn" class="btn btn-secondary" disabled>Previous</button>
+                <button id="nextBtn" class="btn btn-primary">Next</button>
+            </div>
+
+            <div class="navigation-dots" id="navigationDots"></div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="screen">
+            <div class="results-container">
+                <h1 id="resultTitle"></h1>
+                <div class="score-circle">
+                    <div class="score-number" id="scoreNumber"></div>
+                    <div class="score-label">out of 24</div>
+                </div>
+
+                <div id="resultMessage" class="result-message"></div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="correctCount">0</div>
+                        <div class="stat-label">Correct</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="incorrectCount">0</div>
+                        <div class="stat-label">Incorrect</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="percentageScore">0%</div>
+                        <div class="stat-label">Score</div>
+                    </div>
+                </div>
+
+                <div id="reviewContainer" class="review-container"></div>
+
+                <div class="results-actions">
+                    <button id="retryBtn" class="btn btn-primary">Try Another Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
